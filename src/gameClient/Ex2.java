@@ -186,9 +186,10 @@ public class Ex2 implements Runnable {
 
                 }
                 if (flag) {
-                    double s2 = (gg.shortestPathDist(src, pokemon.get_edge().getSrc()) + pokemon.get_edge().getWeight());
+                    double sum=pokemon.get_edge().getWeight();
+                    double s2 = gg.shortestPathDist(src, pokemon.get_edge().getSrc());
                     if (s2 < shortestPath && s2 > -1) {
-                        shortestPath = s2;
+                        shortestPath = s2+sum;
                         maxPokemon = pokemon;
                     }
                 }
